@@ -1,25 +1,50 @@
 * {
-  border: solid red 1px;
+
   font-kerning: auto;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-weight: normal;
 
 }
+
+body {
+  background: rgb(0 126 161);
+}
 .page-container{
-  height: 95vh;
+  height: 98vh;
   display: grid;
   grid-template-rows: 1fr 2.5fr 1fr;
 }
 
-h1{
+h1 {
   width: 100%;
   text-align: center;
   font-size: 575%;
   margin: 0%;
+  color: white;
 }
 
 h4 {
   font-size: 188%;
+}
+
+.heading{
+  width:100;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+
+}
+
+.home-button-container {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+  width: 12%;
 }
 
 .game-select-page {
@@ -31,7 +56,8 @@ h4 {
 	align-content: stretch;
 }
 
-.classic-game-selector{
+.classic-game-selector {
+  border: solid 1px black;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -41,10 +67,9 @@ h4 {
   width:20%;
   height: 50%;
   margin: 1% 0 .5% 0
-
-
 }
-.difficult-game-selector{
+.difficult-game-selector {
+  border: solid 1px black;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -60,17 +85,20 @@ h4 {
 .gameboards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: white 2px solid;
 
 }
 
 .left-play-board-center {
   display:grid;
   grid-template-rows: 1fr 1.2fr 1fr;
+  border-right: 1px solid white;
 }
 
 .right-play-board-center {
   display:grid;
   grid-template-rows: 1fr 1.2fr 1fr;
+  border-left: 1px solid white;
 }
 
 .left-play-board-edge {
@@ -102,11 +130,13 @@ h4 {
 .left-score-template{
   display: grid;
   grid-template-columns: 2.5fr 3.5fr;
+  border: solid 1.8px black;
 
 }
 .right-score-template{
   display: grid;
   grid-template-columns: 3.5fr 2.5fr;
+  border: solid 1.8px black;
 
 }
 
@@ -147,6 +177,7 @@ h4 {
 .vs{
   text-align: justify;
   text-align-last: center;
+  color: white;
 }
 
 

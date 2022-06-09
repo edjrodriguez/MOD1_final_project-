@@ -3,6 +3,7 @@ var difficultGameSelectorButton = document.querySelector('.difficult-game-select
 var gameSelectPageHome = document.querySelector('.game-select-page');
 var gameBoardPage = document.querySelector('.gameboards');
 var scoreCard = document.querySelector('.score-cards');
+var homeButtonView = document.querySelector('.home-button-container');
 var homeButton = document.querySelector('.home-button');
 
 
@@ -14,7 +15,7 @@ function beginClassicGame(event) {
   hide(gameSelectPageHome);
   show(gameBoardPage);
   show(scoreCard);
-  show(homeButton)
+  show(homeButtonView)
 
 };
 
@@ -22,7 +23,7 @@ function goHome(){
   show(gameSelectPageHome);
   hide(gameBoardPage);
   hide(scoreCard);
-  hide(homeButton)
+  hide(homeButtonView)
 
 }
 
