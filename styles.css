@@ -1,3 +1,168 @@
 * {
   border: solid red 1px;
+  font-kerning: auto;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-weight: normal;
+
+}
+.page-container{
+  height: 95vh;
+  display: grid;
+  grid-template-rows: 1fr 2.5fr 1fr;
+}
+
+h1{
+  width: 100%;
+  text-align: center;
+  font-size: 575%;
+  margin: 0%;
+}
+
+h4 {
+  font-size: 188%;
+}
+
+.game-select-page {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.classic-game-selector{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  width:20%;
+  height: 50%;
+  margin: 1% 0 .5% 0
+
+
+}
+.difficult-game-selector{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  width:20%;
+  height: 50%;
+  margin: .5% 0 1% 0 ;
+}
+
+
+.gameboards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.left-play-board-center {
+  display:grid;
+  grid-template-rows: 1fr 1.2fr 1fr;
+}
+
+.right-play-board-center {
+  display:grid;
+  grid-template-rows: 1fr 1.2fr 1fr;
+}
+
+.left-play-board-edge {
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.right-play-board-edge {
+  display:grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.left-user-wins,
+.right-user-wins{
+  width: 100%;
+  text-align: center;
+  font-size: 150%;
+  margin: 0%;
+
+}
+
+.score-cards{
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+
+}
+
+
+.left-score-template{
+  display: grid;
+  grid-template-columns: 2.5fr 3.5fr;
+
+}
+.right-score-template{
+  display: grid;
+  grid-template-columns: 3.5fr 2.5fr;
+
+}
+
+.score-container{
+  display:flex;
+  flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+
+.right-score,
+.left-score{
+  display: grid;
+  grid-template-rows: .5fr 2fr;
+}
+
+.right-score-count,
+.left-score-count{
+  display: grid;
+  grid-template-rows: .5fr 1fr;
+  text-align: justify;
+  text-align-last: center;
+  margin: 0%;
+}
+
+.vs-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  font-size: 2.75em;
+}
+
+.vs{
+  text-align: justify;
+  text-align-last: center;
+}
+
+
+.score {
+  height:100%;
+  width: 60%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  font-size: 5em;
+}
+
+
+.hidden{
+  display: none;
 }
