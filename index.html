@@ -3,69 +3,129 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href="/rock.svg">
+    <link href="/paper.svg">
+    <link href="/scissors.svg">
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
     <main class="page-container">
+
+
       <section class="heading">
         <h1 class="title"> Rock, Paper, Scissors</h1>
         <div class="home-button-container hidden">
-          <button class="home-button" type="button" name="button">Home</button>
+          <button style = "cursor:pointer" class="home-button" type="button" name="button">Home</button>
         </div>
       </section>
-      <div class="game-select-page ">
-        <h4 class="classic-game-selector">Classic Game</h4>
-        <h4 class="difficult-game-selector">Difficult</h4>
-      </div>
+
+
+      <section class="game-select-page ">
+        <h4 style = "cursor:pointer" class="classic-game-selector">Classic Game</h4>
+        <h4 style = "cursor:pointer" class="difficult-game-selector">Difficult</h4>
+      </section>
+
+
+
       <section class="gameboards hidden">
-        <div class="left-play-board-edge">
-          <div class="rock"></div>
-          <div class="paper"></div>
-          <div class="scissors"></div>
-        </div>
-        <div class="left-play-board-empty"></div>
-        <div class="left-play-board-center">
-          <div class="null"></div>
-          <div class="left-user-selection"></div>
-          <div class="null"></div>
-        </div>
-        <div class="right-play-board-center">
-          <div class="null"></div>
-          <div class="right-user-selection"></div>
-          <div class="null"></div>
-        </div>
-        <div class="right-play-board-empty"></div>
-        <div class="right-play-board-edge">
-          <div class="rock"></div>
-          <div class="paper"></div>
-          <div class="scissors"></div>
-        </div>
+
+          <div class="left-player-board">
+            <div class="left-play-board-edge">
+              <div class="rock">
+                <img class="rock-image" src="SVG/rock.svg">
+              </div>
+              <div class="paper">
+                <img class="paper-image" src="SVG/paper.svg">
+              </div>
+              <div class="scissors">
+                <img class="scissors-image" src="SVG/scissors.svg">
+              </div>
+            </div>
+
+            <div class="left-play-board-empty"></div>
+
+            <div class="left-play-board-center">
+              <!-- <div class="null"></div> -->
+              <div class="left-user-selection">
+                <div class="rock-select hidden">
+                  <img class="rock-image" src="SVG/rock.svg">
+                </div>
+                <div class="paper-select ">
+                  <img class="paper-image" src="SVG/paper.svg">
+                </div>
+                <div class="scissors-select hidden">
+                  <img class="scissors-image" src="SVG/scissors.svg">
+                </div>
+              </div>
+              <!-- <div class="null"></div> -->
+            </div>
+          </div>
+          <div class="right-player-board">
+            <div class="right-play-board-center">
+              <!-- <div class="null"></div> -->
+              <div class="right-user-selection">
+                <div class="rock-select hidden ">
+                  <img class="rock-image" src="SVG/rock.svg">
+                </div>
+                <div class="paper-select hidden">
+                  <img class="paper-image" src="SVG/paper.svg">
+                </div>
+                <div class="scissors-select ">
+                  <img class="scissors-image" src="SVG/scissors.svg">
+                </div>
+              </div>
+              <!-- <div class="null"></div> -->
+            </div>
+            <div class="right-play-board-empty"></div>
+            <div class="right-play-board-edge">
+              <div class="rock">
+                <img class="rock-image" src="SVG/rock.svg">
+              </div>
+              <div class="paper">
+                <img class="paper-image" src="SVG/paper.svg">
+              </div>
+              <div class="scissors">
+                <img class="scissors-image" src="SVG/scissors.svg">
+              </div>
+            </div>
+          </div>
+
       </section>
-      <section class="score-cards hidden">
-        <div class="left-score-template">
-          <div class="left-user-image"></div>
-          <div class="left-score">
-            <h3 class="left-user-wins">Wins:</h3>
-            <div class="score-container">
-              <p class="left-score-count score">33</p>
+
+
+      <div class="score-card-container">
+        <section class="score-cards hidden">
+            <div class="left-score-template">
+              <div class="user-image-container">
+                <div class="left-user-image">👨🏿‍💻</div>
+              </div>
+              <div class="left-score">
+                <h3 class="left-user-wins">Wins:</h3>
+                <div class="score-container">
+                  <p class="left-score-count score">00</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="vs-container">
-          <p class="vs">VS.</p>
-        </div>
-        <div class="right-score-template">
-          <div class="right-score">
-            <h3 class="right-user-wins">Wins:</h3>
-            <div class="score-container">
-              <p class="right-score-count score">33</p>
+            <div class="vs-container">
+              <p class="vs">VS.</p>
             </div>
-          </div>
-          <div class="right-user-image"></div>
+            <div class="right-score-template">
+              <div class="right-score">
+                <h3 class="right-user-wins">Wins:</h3>
+                <div class="score-container">
+                  <p class="right-score-count score">00</p>
+                </div>
+              </div>
+              <div class="user-image-container">
+                <div class="right-user-image">💻</div>
+              </div>
+            </div>
         </section>
-      </main>
+    <!-- </div> -->
+    </main>
       <script type="text/javascript" src="./src/main.js"></script>
       <script type="text/javascript" src="./src/game.js"></script>
       <script type="text/javascript" src="./src/player.js"></script>
-    </body>
-    </html>
+  </body>
+</html>

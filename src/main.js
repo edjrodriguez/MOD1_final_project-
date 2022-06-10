@@ -6,10 +6,27 @@ var scoreCard = document.querySelector('.score-cards');
 var homeButtonView = document.querySelector('.home-button-container');
 var homeButton = document.querySelector('.home-button');
 
-
 classicGameSelectorButton.addEventListener('click', beginClassicGame);
+classicGameSelectorButton.addEventListener('mouseenter', showClassicPieces);
 difficultGameSelectorButton.addEventListener('click', beginDifficultGame);
+difficultGameSelectorButton.addEventListener('mouseenter', showDifficultPieces);
+
 homeButton.addEventListener('click', goHome);
+
+function goHome(){
+  show(gameSelectPageHome);
+  hide(gameBoardPage);
+  hide(scoreCard);
+  hide(homeButtonView)
+}
+
+function showClassicPieces(){
+
+}
+
+function showDifficultPieces(){
+  
+}
 
 function beginClassicGame(event) {
   hide(gameSelectPageHome);
@@ -19,21 +36,12 @@ function beginClassicGame(event) {
 
 };
 
-function goHome(){
-  show(gameSelectPageHome);
-  hide(gameBoardPage);
-  hide(scoreCard);
-  hide(homeButtonView)
-
-}
-
 function beginDifficultGame(event) {
   hide(gameSelectPageHome);
   show(gameBoardPage);
   show(scoreCard);
-  show(homeButton);
+  show(homeButtonView)
 };
-
 
 function show(element) {
   element.classList.remove('hidden')
