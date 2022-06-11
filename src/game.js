@@ -1,31 +1,39 @@
 class Game{
   constructor(){
-      this.leftWins = 8;
-      this.rightWins = 0;
-      this.gamePieces =
-      ['rock', 'paper', 'scisssors'];
-      console.log("Hello", this.gamePieces);
+      this.leftPlayer = null;
+      this.rightPlayer = null;
+      this.classicGamePieces =
+      ['rock', 'paper', 'scissors'];
+      this.difficultGamePieces = [];
+
   }
 
 
   startClassicGame(){
-    var leftPlayer = new Player();
-    var rightPlayer = new Player ();
+    this.leftPlayer = new Player();
+    this.rightPlayer = new Player ();
 
   }
 
   startDifficultGame(){
-    var leftPlayer = new Player();
-    var rightPlayer = new Player ();
+    this.leftPlayer = new Player();
+    this.rightPlayer = new Player();
 
 
   }
-  checkWinner(){
+  checkWinnerClassicGame(){
+    if(this.leftPlayer.playerPiece === this.rightPlayer.playerPiece){
+      console.log("TIE");
 
-  }
-  reset(){
+    }
 
-  }
+  checkWinnerDifficultGame(){
+    if(this.leftPlayer.playerPiece === this.rightPlayer.playerPiece){
+        console.log("TIE");
+
+      }
+
+}
 }
 
 
