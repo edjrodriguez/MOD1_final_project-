@@ -119,11 +119,12 @@ height:75%;
 
 
 
-
-
-.paper-select,
-.rock-select,
-.scissors-select{
+.R-paper-select,
+.R-rock-select,
+.R-scissors-select,
+.L-paper-select,
+.L-rock-select,
+.L-scissors-select{
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -247,7 +248,8 @@ height:75%;
   	flex-wrap: nowrap;
   	justify-content: center;
   	align-items: stretch;
-  	align-content: center;}
+  	align-content: center;
+  }
 
 
 
