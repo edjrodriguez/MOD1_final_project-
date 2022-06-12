@@ -11,6 +11,16 @@ var homeButtonView = document.querySelector('.home-button-container');
 var homeButton = document.querySelector('.home-button');
 var leftScore  = document.querySelector('.left-score-count')
 var rightScore = document.querySelector('.right-score-count')
+var gameWin = document.querySelector('.game-result-win')
+var gameLose = document.querySelector('.game-result-lose')
+var gameTie = document.querySelector('.game-result-tie')
+
+
+
+
+
+
+
 // var computerSide = document.querySelector('.right-player-board');
 // var computerSideOffSides = document.querySelector('.computer-side')
 
@@ -37,14 +47,11 @@ leftPaper.addEventListener('click', playerLeftSelectClassic);
 leftScissors.addEventListener('click', playerLeftSelectClassic);
 
 
-
 function beginClassicGame(event) {
   beginGame();
   newGame = new Game();
   newGame.startClassicGame();
-
 };
-
 
 function playerLeftSelectClassic(event){
   leftSelect();
@@ -59,8 +66,9 @@ function playerLeftSelectClassic(event){
     show(selectLeftScissors)
     newGame.leftPlayer.takeTurn('scissors');
   }
-computerSelectClassic();
-newGame.checkWinnerClassicGame();
+  setTimeout(computerSelectClassic, 500);
+  setTimeout(classicGameScoreBoard, 1500);
+  setTimeout(playAgain, 2500);
 }
 
 function computerSelectClassic() {
@@ -97,7 +105,7 @@ function playerLeftSelectDifficult(event){
     show(selectLeftScissors)
     newGame.leftPlayer.takeTurn('scissors');
   }
-computerSelectDifficult();
+setTimeout(computerSelectDifficult, 4000);
 newGame.checkWinnerDifficultGame();
 }
 
@@ -113,10 +121,13 @@ function computerSelectDifficult() {
     show(selectRightScissors);
   }
   newGame.rightPlayer.takeTurn(piece);
+
   console.log(newGame);
 }
 
-
+function classicGameScoreBoard(){
+  newGame.checkWinnerClassicGame();
+}
 
 function goHome(){
   show(gameSelectPageHome);
@@ -127,7 +138,24 @@ function goHome(){
   hide(gameBoardHeading)
 }
 
-
+function playAgain() {
+  show(gameBoardPage);
+  hide(gameTie);
+  hide(gameWin);
+  hide(gameLose)
+  show(leftPaper);
+  show(leftScissors);
+  show(leftRock);
+  show(rightPaper);
+  show(rightScissors);
+  show(rightRock);
+  hide(selectRightRock);
+  hide(selectLeftRock);
+  hide(selectRightPaper);
+  hide(selectLeftPaper);
+  hide(selectRightScissors);
+  hide(selectLeftScissors);
+}
 
 function leftSelect(){
   hide(leftPaper);
