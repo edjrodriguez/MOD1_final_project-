@@ -24,16 +24,23 @@ class Game{
   checkWinnerClassicGame(){
     if(this.leftPlayer.playerPiece === this.rightPlayer.playerPiece){
       console.log("TIE");
-
+      return
+    } else if ((this.leftPlayer.playerPiece === "rock" && this.rightPlayer.playerPiece === 'scissors') || (this.leftPlayer.playerPiece === "paper" && this.rightPlayer.playerPiece === 'rock') || (this.leftPlayer.playerPiece === "scissors" && this.rightPlayer.playerPiece === 'paper')){
+      console.log('You Win!')
+    } else {
+      console.log('You Lose');
     }
-
+  }
   checkWinnerDifficultGame(){
     if(this.leftPlayer.playerPiece === this.rightPlayer.playerPiece){
-        console.log("TIE");
-
-      }
-
-}
+      console.log("TIE");
+      return
+    } else if ((this.leftPlayer.playerPiece === "rock" && this.rightPlayer.playerPiece === 'scissors') || (this.leftPlayer.playerPiece === "paper" && this.rightPlayer.playerPiece === 'rock') || (this.leftPlayer.playerPiece === "scissors" && this.rightPlayer.playerPiece === 'paper')){
+      console.log('You Win!')
+    } else {
+      console.log('You Lose');
+    }
+  }
 }
 
 

@@ -32,9 +32,9 @@ var selectRightScissors = document.querySelector('.R-scissors-select')
 classicGameSelectorButton.addEventListener('click', beginClassicGame);
 difficultGameSelectorButton.addEventListener('click', beginDifficultGame);
 homeButton.addEventListener('click', goHome);
-leftRock.addEventListener('click', playerLeftSelect);
-leftPaper.addEventListener('click', playerLeftSelect);
-leftScissors.addEventListener('click', playerLeftSelect);
+leftRock.addEventListener('click', playerLeftSelectClassic);
+leftPaper.addEventListener('click', playerLeftSelectClassic);
+leftScissors.addEventListener('click', playerLeftSelectClassic);
 
 
 
@@ -45,13 +45,8 @@ function beginClassicGame(event) {
 
 };
 
-function beginDifficultGame(event) {
-  beginGame();
-  newGame = new Game();
-  newGame.startDifficultGame();
-};
 
-function playerLeftSelect(event){
+function playerLeftSelectClassic(event){
   leftSelect();
   var piece = event.target.classList;
   if (piece.contains('rock-selection')) {
@@ -64,10 +59,11 @@ function playerLeftSelect(event){
     show(selectLeftScissors)
     newGame.leftPlayer.takeTurn('scissors');
   }
-computerSelect();
+computerSelectClassic();
+newGame.checkWinnerClassicGame();
 }
 
-function computerSelect() {
+function computerSelectClassic() {
   rightSelect();
   var computerSelection = Math.floor(Math.random() * (2 - 0 + 1) + 0);
   var piece = newGame.classicGamePieces[computerSelection];
@@ -79,11 +75,46 @@ function computerSelect() {
     show(selectRightScissors);
   }
   newGame.rightPlayer.takeTurn(piece);
-
-
   console.log(newGame);
 }
 
+function beginDifficultGame(event) {
+  beginGame();
+  newGame = new Game();
+  newGame.startDifficultGame();
+};
+
+function playerLeftSelectDifficult(event){
+  leftSelect();
+  var piece = event.target.classList;
+  if (piece.contains('rock-selection')) {
+    show(selectLeftRock)
+    newGame.leftPlayer.takeTurn('rock');
+  } else if (piece.contains('paper-selection')) {
+    show(selectLeftPaper)
+    newGame.leftPlayer.takeTurn('paper');
+  } else if (piece.contains('scissors-selection')) {
+    show(selectLeftScissors)
+    newGame.leftPlayer.takeTurn('scissors');
+  }
+computerSelectDifficult();
+newGame.checkWinnerDifficultGame();
+}
+
+function computerSelectDifficult() {
+  rightSelect();
+  var computerSelection = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+  var piece = newGame.classicGamePieces[computerSelection];
+  if (piece === 'rock') {
+    show(selectRightRock);
+  } else if (piece === 'paper') {
+    show(selectRightPaper);
+  } else if (piece === 'scissors') {
+    show(selectRightScissors);
+  }
+  newGame.rightPlayer.takeTurn(piece);
+  console.log(newGame);
+}
 
 
 

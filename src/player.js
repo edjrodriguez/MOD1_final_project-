@@ -6,10 +6,8 @@ class Player {
     this.playerPiece = null;
   }
 
-
   takeTurn(piece){
     this.playerPiece = piece;
-    newGame.checkWinnerClassicGame();
 
   }
 }
