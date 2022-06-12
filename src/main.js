@@ -5,10 +5,18 @@ var difficultGameSelectorButton = document.querySelector('.difficult-game-select
 var gameSelectPageHome = document.querySelector('.game-select-page');
 var gameSelectHeading = document.querySelector('.heading-game-select');
 var gameBoardHeading = document.querySelector('.heading');
+var difficultBoardHeading = document.querySelector('.difficult-heading');
+
 var gameBoardPage = document.querySelector('.gameboards');
+var difficultGameBoardPage = document.querySelector('.difficult-gameboards');
 var scoreCard = document.querySelector('.score-cards');
 var homeButtonView = document.querySelector('.home-button-container');
+var homeButtonViewDifficult = document.querySelector('.home-button-container-difficult');
+
+
 var homeButton = document.querySelector('.home-button');
+var homeButton2 = document.querySelector('.home-button2');
+
 var leftScore  = document.querySelector('.left-score-count')
 var rightScore = document.querySelector('.right-score-count')
 var gameWin = document.querySelector('.game-result-win')
@@ -42,17 +50,18 @@ var selectRightScissors = document.querySelector('.R-scissors-select')
 classicGameSelectorButton.addEventListener('click', beginClassicGame);
 difficultGameSelectorButton.addEventListener('click', beginDifficultGame);
 homeButton.addEventListener('click', goHome);
+homeButton2.addEventListener('click', goHome);
+
 leftRock.addEventListener('click', playerLeftSelectClassic);
 leftPaper.addEventListener('click', playerLeftSelectClassic);
 leftScissors.addEventListener('click', playerLeftSelectClassic);
 
 
 function beginClassicGame(event) {
-  beginGame();
+  beginClassicTypeGame ()
   newGame = new Game();
   newGame.startClassicGame();
 };
-
 function playerLeftSelectClassic(event){
   leftSelect();
   var piece = event.target.classList;
@@ -67,10 +76,9 @@ function playerLeftSelectClassic(event){
     newGame.leftPlayer.takeTurn('scissors');
   }
   setTimeout(computerSelectClassic, 500);
-  setTimeout(classicGameScoreBoard, 1500);
-  setTimeout(playAgain, 2500);
+  setTimeout(classicGameScoreBoard, 1200);
+  setTimeout(playAgain, 2700);
 }
-
 function computerSelectClassic() {
   rightSelect();
   var computerSelection = Math.floor(Math.random() * (2 - 0 + 1) + 0);
@@ -87,7 +95,7 @@ function computerSelectClassic() {
 }
 
 function beginDifficultGame(event) {
-  beginGame();
+  beginDifficultTypeGame ()
   newGame = new Game();
   newGame.startDifficultGame();
 };
@@ -132,10 +140,13 @@ function classicGameScoreBoard(){
 function goHome(){
   show(gameSelectPageHome);
   hide(gameBoardPage);
+  hide(difficultGameBoardPage);
   hide(scoreCard);
-  hide(homeButtonView)
+  hide(homeButtonView);
+  hide(homeButtonViewDifficult);
   show(gameSelectHeading);
   hide(gameBoardHeading)
+  hide(difficultBoardHeading)
 }
 
 function playAgain() {
@@ -177,13 +188,22 @@ function hide(element) {
   element.classList.add('hidden')
 };
 
-function beginGame (){
+function beginClassicTypeGame (){
   hide(gameSelectPageHome);
   hide(gameSelectHeading);
   show(gameBoardHeading)
   show(gameBoardPage);
   show(scoreCard);
   show(homeButtonView)
+}
+
+function beginDifficultTypeGame (){
+  hide(gameSelectPageHome);
+  hide(gameSelectHeading);
+  show(difficultBoardHeading)
+  show(difficultGameBoardPage);
+  show(scoreCard);
+  show(homeButtonViewDifficult)
 }
 
 // //these are an extra if I have time

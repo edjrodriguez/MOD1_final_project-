@@ -20,22 +20,25 @@
         </div>
       </section>
 
+      <section class="difficult-heading hidden">
+        <h1 class="title"> Metal, Water, Wood, Fire, Earth</h1>
+        <div class="home-button-container-difficult hidden">
+          <button style = "cursor:pointer" class="home-button2" type="button" name="button">Home</button>
+        </div>
+      </section>
+
       <section class="heading-game-select ">
         <h1 class="title h1-game-select-page"> Rock, Paper, Scissors</h1>
         <div class="home-button-container hidden">
           <button style = "cursor:pointer" class="home-button" type="button" name="button">Home</button>
         </div>
       </section>
-
-
       <section class="game-result-win hidden ">
         <h4 class="classic-game-result win">You Won!!</h4>
       </section>
-
       <section class="game-result-lose hidden ">
         <h4 class="classic-game-result lose">You lost... Try again!</h4>
       </section>
-
       <section class="game-result-tie hidden ">
         <h4  class="classic-game-result tie"> === TIE === </h4>
       </section>
@@ -50,24 +53,20 @@
 
 
       <section class="gameboards hidden">
-
           <div class="left-player-board">
             <div class="left-play-board-edge">
               <div class="rock">
-                <img style = "cursor:pointer" class="L-rock-image rock-selection" src="SVG/rock.svg">
+                <img style = "cursor:pointer" class="L-rock-image classic-left-piece-rock rock-selection" src="SVG/rock.svg">
               </div>
               <div class="paper">
-                <img style = "cursor:pointer" class="L-paper-image  paper-selection" src="SVG/paper.svg">
+                <img style = "cursor:pointer" class="L-paper-image classic-left-piece-paper paper-selection" src="SVG/paper.svg">
               </div>
               <div class="scissors">
-                <img style = "cursor:pointer" class="L-scissors-image scissors-selection" src="SVG/scissors.svg">
+                <img style = "cursor:pointer" class="L-scissors-image classic-left-piece-scissors scissors-selection" src="SVG/scissors.svg">
               </div>
             </div>
-
             <div class="left-play-board-empty"></div>
-
             <div class="left-play-board-center">
-
               <div class="left-user-selection ">
                 <div class="L-rock-select hidden">
                   <img style = "cursor:pointer" class="L-rock-image" src="SVG/rock.svg">
@@ -109,6 +108,113 @@
             </div>
           </div>
       </section>
+
+
+
+      <section class="difficult-gameboards hidden">
+
+
+          <div class="left-player-board">
+
+
+
+            <div class="left-play-board-edge">
+              <div class="metal-container gamepiece">
+                <div style = "cursor:pointer" class="l-metal left-D-piece difficult-game-piece">⚙️</div>
+              </div>
+              <div class="water-container gamepiece">
+                <div style = "cursor:pointer" class="l-water left-D-piece  difficult-game-piece">🌊</div>
+              </div>
+              <div class="wood-container gamepiece">
+                <div style = "cursor:pointer" class="l-wood left-D-piece  difficult-game-piece">🪵</div>
+              </div>
+            </div>
+            <div class="left-play-board-middle">
+              <div class="fire-container gamepiece">
+                <div style = "cursor:pointer" class="l-fire left-D-piece  difficult-game-piece">🔥</div>
+              </div>
+              <div class="earth-container gamepiece">
+                <div style = "cursor:pointer" class="l-earth left-D-piece  difficult-game-piece">🌎</div>
+              </div>
+            </div>
+
+
+
+            <div class="left-play-board-center">
+              <div class="left-user-selection ">
+                <div class="L-metal-select gamepiece hidden">
+                  <div class="l-metal difficult-game-piece">⚙️ 🔩 </div>
+                </div>
+                <div class="L-water-select gamepiece hidden">
+                  <div class="l-water difficult-game-piece">🌊</div>
+                </div>
+                <div class="L-wood-select gamepiece hidden">
+                  <div class="l-wood difficult-game-piece">🪵</div>
+                </div>
+                <div class="L-fire-select gamepiece hidden">
+                  <div class="l-fire difficult-game-piece">🔥</div>
+                </div>
+                <div class="L-earth-select gamepiece hidden">
+                  <div class="l-earth difficult-game-piece">🌎</div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+          <div class="right-player-board">
+
+            <div class="right-play-board-center">
+              <div class="right-user-selection ">
+                <div class="R-metal-select gamepiece hidden">
+                  <div class="r-metal difficult-game-piece">⚙️</div>
+                </div>
+                <div class="R-water-select gamepiece hidden">
+                  <div class="r-water difficult-game-piece">🌊</div>
+                </div>
+                <div class="R-wood-select gamepiece hidden">
+                  <div class="r-wood difficult-game-piece">🪵</div>
+                </div>
+                <div class="R-fire-select gamepiece hidden">
+                  <div class="r-fire difficult-game-piece">🔥</div>
+                </div>
+                <div class="R-earth-select gamepiece hidden">
+                  <div class="r-earth difficult-game-piece">🌎</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="right-play-board-middle">
+              <div class="fire-container gamepiece">
+                <div class="r-fire outside-fire difficult-game-piece">🔥</div>
+              </div>
+              <div class="earth-container gamepiece">
+                <div class="r-earth outside-earth difficult-game-piece">🌎</div>
+              </div>
+            </div>
+
+            <div class="right-play-board-edge">
+              <div class="metal-container gamepiece">
+                <div class="r-metal outside-metal difficult-game-piece">⚙️</div>
+              </div>
+              <div class="water-container gamepiece">
+                <div class="r-water outside-water difficult-game-piece">🌊</div>
+              </div>
+              <div class="wood-container gamepiece">
+                <div class="r-wood outside-wood difficult-game-piece">🪵</div>
+              </div>
+            </div>
+
+
+
+          </div>
+      </section>
+
+
+
       <div class="score-card-container">
         <section class="score-cards hidden">
             <div class="left-score-template">
@@ -137,7 +243,9 @@
               </div>
             </div>
         </section>
-    </div>
+      </div>
+
+
     </main>
       <script type="text/javascript" src="./src/main.js"></script>
       <script type="text/javascript" src="./src/game.js"></script>

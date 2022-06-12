@@ -38,6 +38,15 @@ h1 {
   color: white;
 }
 
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 3.8em;
+  margin: 0%;
+  margin-bottom: 1%;
+  color: white;
+}
+
 .h1-game-select-page {
   width: 100%;
   text-align: center;
@@ -47,14 +56,35 @@ h1 {
   color: white;
 }
 
+
 h4 {
   font-size: 1.4em;
 }
-
-h4:hover{
+.difficult-game-selector:hover,
+.classic-game-selector:hover{
   font-size: 1.45em;
   font-weight: bold;
 }
+
+.gamepiece{
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: space-evenly;
+align-items: center;
+align-content: stretch;
+}
+
+.gamepiece:hover{
+  font-size:
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
 
 .rock,
 .paper,
@@ -69,6 +99,7 @@ h4:hover{
   align-content: stretch;
   object-fit: fill;
 }
+
 
 .R-paper-image,
 .L-paper-image{
@@ -90,28 +121,22 @@ width: 55%;
 height:55%;
 }
 
-.R-paper-image:hover,
-.L-paper-image:hover{
-  margin-bottom: 2%;
-  /* box-shadow: 1em 2em 1em black; */
-}
 
-
-
-.L-paper-image:hover{
+.classic-left-piece-paper:hover{
+margin-bottom: 2%;
 width: 105%;
 height: 105%;
 /* box-shadow: 1em 2em 1em black; */
 }
 
 
-.L-scissors-image:hover {
+.classic-left-piece-scissors:hover {
 width: 110%;
 height: 110%;
 /* box-shadow: 1em 2em 1em black; */
 }
 
-.L-rock-image:hover {
+.classic-left-piece-rock:hover {
 width: 75%;
 height:75%;
 /* box-shadow: 1em 2em 1em black; */
@@ -135,7 +160,8 @@ height:75%;
 }
 
 
-.heading{
+.heading,
+.difficult-heading{
   width:100%;
   display: flex;
   flex-direction: column;
@@ -145,6 +171,7 @@ height:75%;
 
 }
 
+.home-button-container-difficult,
 .home-button-container {
   display: flex;
 	flex-direction: column;
@@ -157,7 +184,7 @@ height:75%;
 
 }
 
-
+.home-button-container-difficult:hover,
 .home-button-container:hover {
   display: flex;
 	flex-direction: column;
@@ -267,8 +294,6 @@ height:75%;
 
 }
 
-
-
 .gameboards {
     display: flex;
   	flex-direction: row;
@@ -277,9 +302,16 @@ height:75%;
   	align-items: stretch;
     height: 50%;
     margin-bottom: 5%;
+}
 
-
-
+.difficult-gameboards {
+    display: flex;
+  	flex-direction: row;
+  	flex-wrap: nowrap;
+  	justify-content: center;
+  	align-items: stretch;
+    height: 50%;
+    margin-bottom: 5%;
 }
 
 .left-player-board,
@@ -294,8 +326,32 @@ height:75%;
   	align-content: center;
   }
 
+  .metal-container,
+  .water-container,
+  .wood-container{
+    width: 100%;
+    height: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    object-fit: fill;
+  }
 
-
+  .fire-container,
+  .earth-container{
+    width: 100%;
+    height: calc(100%/2);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    object-fit: fill;
+  }
 
 .left-play-board-center{
 display:grid;
@@ -312,40 +368,31 @@ border-right: 1px solid white;
   height: 33%;
 }
 
+.left-play-board-middle,
+.right-play-board-middle,
 .right-play-board-center,
 .left-play-board-center,
 .right-play-board-edge,
 .left-play-board-edge {
-  display: flex;
+    display: flex;
   	flex-direction: column;
   	flex-wrap: nowrap;
-  	justify-content: center;
+  	justify-content: space-evenly;
   	align-items: stretch;
   	/* align-content: center; */
     width: calc(100%/3);
-
-
 }
-
 
 .right-play-board-empty,
 .left-play-board-empty {
   display:grid;
   grid-template-rows: 1fr 1fr 1fr;
   width: calc(100%/3);
-
-
 }
-
-/* .scorecard-container{
-  height: 10%;
-} */
 
 .score-cards{
   display: grid;
   grid-template-columns: 2.5fr 1fr 2.5fr;
-
-
 }
 
 .left-user-wins,
@@ -354,25 +401,19 @@ border-right: 1px solid white;
   text-align: center;
   font-size: 150%;
   margin: 0%;
-
 }
-
-
-
 
 .left-score-template{
   display: grid;
   grid-template-columns: 2.5fr 3.5fr;
   border: solid 1.8px black;
   height: 92%;
-
 }
 .right-score-template{
   display: grid;
   grid-template-columns: 3.5fr 2.5fr;
   border: solid 1.8px black;
   height: 92%;
-
 }
 
 .score-container{
@@ -407,13 +448,23 @@ border-right: 1px solid white;
 	justify-content: center;
 	align-items: center;
 	align-content: stretch;
-
 }
 
 .left-user-image,
 .right-user-image {
   font-size: 5.8em;
   margin-bottom: 25%;
+}
+
+.difficult-game-piece{
+  font-size: 4em;
+  /* margin-bottom:10%; */
+}
+
+.left-D-piece:hover{
+  font-size: 8em;
+
+
 }
 
 .vs-container {
