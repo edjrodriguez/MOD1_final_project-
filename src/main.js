@@ -12,34 +12,19 @@ var difficultGameBoardPage = document.querySelector('.difficult-gameboards');
 var scoreCard = document.querySelector('.score-cards');
 var homeButtonView = document.querySelector('.home-button-container');
 var homeButtonViewDifficult = document.querySelector('.home-button-container-difficult');
-
-
 var homeButton = document.querySelector('.home-button');
 var homeButton2 = document.querySelector('.home-button2');
-
 var leftScore  = document.querySelector('.left-score-count')
 var rightScore = document.querySelector('.right-score-count')
 var gameWin = document.querySelector('.game-result-win')
 var gameLose = document.querySelector('.game-result-lose')
 var gameTie = document.querySelector('.game-result-tie')
-
-
-
-
-
-
-
-// var computerSide = document.querySelector('.right-player-board');
-// var computerSideOffSides = document.querySelector('.computer-side')
-
-
 var leftRock = document.querySelector('.L-rock-image')
 var leftPaper = document.querySelector('.L-paper-image')
 var leftScissors = document.querySelector('.L-scissors-image')
 var selectLeftRock = document.querySelector('.L-rock-select')
 var selectLeftPaper = document.querySelector('.L-paper-select')
 var selectLeftScissors = document.querySelector('.L-scissors-select')
-
 var rightRock = document.querySelector('.outside-rock')
 var rightPaper = document.querySelector('.outside-paper')
 var rightScissors = document.querySelector('.outside-scissors')
@@ -47,8 +32,8 @@ var selectRightRock = document.querySelector('.R-rock-select')
 var selectRightPaper = document.querySelector('.R-paper-select')
 var selectRightScissors = document.querySelector('.R-scissors-select')
 
-classicGameSelectorButton.addEventListener('click', beginClassicGame);
-difficultGameSelectorButton.addEventListener('click', beginDifficultGame);
+classicGameSelectorButton.addEventListener('click', openClassicTypeGame);
+difficultGameSelectorButton.addEventListener('click', openDifficultTypeGame);
 homeButton.addEventListener('click', goHome);
 homeButton2.addEventListener('click', goHome);
 
@@ -57,11 +42,7 @@ leftPaper.addEventListener('click', playerLeftSelectClassic);
 leftScissors.addEventListener('click', playerLeftSelectClassic);
 
 
-function beginClassicGame(event) {
-  beginClassicTypeGame ()
-  newGame = new Game();
-  newGame.startClassicGame();
-};
+
 function playerLeftSelectClassic(event){
   leftSelect();
   var piece = event.target.classList;
@@ -76,8 +57,8 @@ function playerLeftSelectClassic(event){
     newGame.leftPlayer.takeTurn('scissors');
   }
   setTimeout(computerSelectClassic, 500);
-  setTimeout(classicGameScoreBoard, 1200);
-  setTimeout(playAgain, 2700);
+  setTimeout(classicGameScoreBoard, 1500);
+  setTimeout(playAgain, 2500);
 }
 function computerSelectClassic() {
   rightSelect();
@@ -94,11 +75,8 @@ function computerSelectClassic() {
   console.log(newGame);
 }
 
-function beginDifficultGame(event) {
-  beginDifficultTypeGame ()
-  newGame = new Game();
-  newGame.startDifficultGame();
-};
+
+
 
 function playerLeftSelectDifficult(event){
   leftSelect();
@@ -135,6 +113,10 @@ function computerSelectDifficult() {
 
 function classicGameScoreBoard(){
   newGame.checkWinnerClassicGame();
+}
+
+function difficultGameScoreBoard(){
+  newGame.checkWinnerDifficultGame();
 }
 
 function goHome(){
@@ -188,22 +170,46 @@ function hide(element) {
   element.classList.add('hidden')
 };
 
-function beginClassicTypeGame (){
-  hide(gameSelectPageHome);
-  hide(gameSelectHeading);
-  show(gameBoardHeading)
-  show(gameBoardPage);
-  show(scoreCard);
-  show(homeButtonView)
+function openClassicTypeGame (event){
+  if (newGame === null){
+    newGame = new Game();
+    newGame.startClassicGame();
+    newGame.rightPlayer.name = "Your Computer"
+    newGame.rightPlayer.token = "💻";
+    hide(gameSelectPageHome);
+    hide(gameSelectHeading);
+    show(gameBoardHeading)
+    show(gameBoardPage);
+    show(scoreCard);
+    show(homeButtonView)
+  } else {
+    hide(gameSelectPageHome);
+    hide(gameSelectHeading);
+    show(gameBoardHeading)
+    show(gameBoardPage);
+    show(scoreCard);
+    show(homeButtonView)
+  }
 }
 
-function beginDifficultTypeGame (){
-  hide(gameSelectPageHome);
-  hide(gameSelectHeading);
-  show(difficultBoardHeading)
-  show(difficultGameBoardPage);
-  show(scoreCard);
-  show(homeButtonViewDifficult)
+function openDifficultTypeGame (){
+  if (newGame === null){
+    newGame = new Game();
+    newGame.startDifficultGame();
+    hide(gameSelectPageHome);
+    hide(gameSelectHeading);
+    show(difficultBoardHeading)
+    show(difficultGameBoardPage);
+    show(scoreCard);
+    show(homeButtonViewDifficult)
+  } else {
+    hide(gameSelectPageHome);
+    hide(gameSelectHeading);
+    show(difficultBoardHeading)
+    show(difficultGameBoardPage);
+    show(scoreCard);
+    show(homeButtonViewDifficult)
+  }
 }
 
 // //these are an extra if I have time
