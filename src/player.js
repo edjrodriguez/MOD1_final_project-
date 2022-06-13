@@ -37,4 +37,44 @@ class Player {
         }
       }
   }
+  takeTurnDifficultGame(event){
+    if (this.name === "Your Computer"){
+      var computerSelection = Math.floor(Math.random() * (4 - 0 + 1) + 0);
+      var piece = newGame.difficultGamePieces[computerSelection];
+        if (piece === 'metal') {
+          show(selectRightMetal);
+        } else if (piece === 'water') {
+          show(selectRightWater);
+        } else if (piece === 'wood') {
+          show(selectRightWood);
+        } else if (piece === 'fire') {
+          show(selectRightFire);
+        } else if (piece === 'earth') {
+          show(selectRightEarth);
+        }
+        newGame.rightPlayer.selectPiece(piece);
+      } else {
+        var piece = event.target.classList;
+        if (piece.contains('l-metal')) {
+          show(selectLeftMetal)
+          newGame.leftPlayer.selectPiece('metal');
+        } else if (piece.contains('l-water')) {
+          show(selectLeftWater)
+          newGame.leftPlayer.selectPiece('water');
+        } else if (piece.contains('l-wood')) {
+          show(selectLeftWood)
+          newGame.leftPlayer.selectPiece('wood');
+        } else if (piece.contains('l-fire')) {
+          show(selectLeftFire)
+          newGame.leftPlayer.selectPiece('fire');
+        }else if (piece.contains('l-earth')) {
+          show(selectLeftEarth)
+          newGame.leftPlayer.selectPiece('earth');
+        }
+      }
+  }
+
+
+
+
 }
