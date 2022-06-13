@@ -15,15 +15,25 @@
 
       <section class="heading hidden">
         <h1 class="title"> Rock, Paper, Scissors</h1>
-        <div class="home-button-container hidden">
-          <button style = "cursor:pointer" class="home-button" type="button" name="button">Home</button>
-        </div>
+          <div class="button-container">
+            <div class="home-button-container hidden">
+              <button style = "cursor:pointer" class="home-button" type="submit" name="button">Home</button>
+            </div>
+            <div class="reset-button-container">
+              <button style = "cursor:pointer" class="reset-button hidden" type="submit" name="button">Reset Game</button>
+            </div>
+          </div>
       </section>
 
       <section class="difficult-heading hidden">
         <h1 class="title"> Metal, Water, Wood, Fire, Earth</h1>
-        <div class="home-button-container-difficult hidden">
-          <button style = "cursor:pointer" class="home-button2" type="button" name="button">Home</button>
+        <div class="button-container">
+          <div class="home-button-container-difficult hidden">
+            <button style = "cursor:pointer" class="home-button2" type="sumbit" name="button">Home</button>
+          </div>
+          <div class="reset-button-container">
+            <button style = "cursor:pointer" class="reset-button2 hidden" type="sumbit" name="button">Reset Game</button>
+          </div>
         </div>
       </section>
 
@@ -33,6 +43,7 @@
           <button style = "cursor:pointer" class="home-button" type="button" name="button">Home</button>
         </div>
       </section>
+
       <section class="game-result-win hidden ">
         <h4 class="classic-game-result win">You Won!!</h4>
       </section>
@@ -46,8 +57,14 @@
 
 
       <section class="game-select-page ">
-        <h4 style = "cursor:pointer" class="classic-game-selector">Classic Game</h4>
-        <h4 style = "cursor:pointer" class="difficult-game-selector">Difficult</h4>
+        <div class="game-selectors">
+          <div class="selector-container">
+            <h4 style = "cursor:pointer" class="classic-game-selector">Classic Game</h4>
+          </div>
+          <div class="selector-container">
+            <h4 style = "cursor:pointer" class="difficult-game-selector">Difficult</h4>
+          </div>
+        </div>
       </section>
 
 

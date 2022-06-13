@@ -11,6 +11,8 @@ var homeButtonView = document.querySelector('.home-button-container');
 var homeButtonViewDifficult = document.querySelector('.home-button-container-difficult');
 var homeButton = document.querySelector('.home-button');
 var homeButton2 = document.querySelector('.home-button2');
+var resetButton = document.querySelector('.reset-button');
+var resetButton2 = document.querySelector('.reset-button2');
 var leftScore  = document.querySelector('.left-score-count');
 var rightScore = document.querySelector('.right-score-count');
 var gameWin = document.querySelector('.game-result-win');
@@ -55,6 +57,10 @@ classicGameSelectorButton.addEventListener('click', openClassicTypeGame);
 difficultGameSelectorButton.addEventListener('click', openDifficultTypeGame);
 homeButton.addEventListener('click', goHome);
 homeButton2.addEventListener('click', goHome);
+
+resetButton.addEventListener('click', resetPage);
+resetButton2.addEventListener('click', resetPage);
+
 leftRock.addEventListener('click', playerLeftSelectClassic);
 leftPaper.addEventListener('click', playerLeftSelectClassic);
 leftScissors.addEventListener('click', playerLeftSelectClassic);
@@ -111,6 +117,10 @@ function goHome(){
   hide(difficultBoardHeading)
 }
 
+function resetPage(){
+
+}
+
 function playAgain() {
   show(gameBoardPage);
   hide(gameTie);
@@ -128,6 +138,7 @@ function playAgain() {
   hide(selectLeftPaper);
   hide(selectRightScissors);
   hide(selectLeftScissors);
+  show(resetButton);
 }
 
 function playDifficultAgain() {
@@ -155,6 +166,7 @@ function playDifficultAgain() {
   hide(selectLeftFire);
   hide(selectRightEarth);
   hide(selectLeftEarth);
+  show(resetButton2);
 }
 
 
@@ -213,6 +225,7 @@ function openClassicTypeGame(event){
     show(gameBoardPage);
     show(scoreCard);
     show(homeButtonView)
+    show(resetButton)
   }
 }
 
@@ -235,6 +248,7 @@ function openDifficultTypeGame (){
     show(difficultGameBoardPage);
     show(scoreCard);
     show(homeButtonViewDifficult)
+    show(resetButton2)
   }
 }
 
