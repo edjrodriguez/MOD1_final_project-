@@ -9,8 +9,8 @@ var difficultGameBoardPage = document.querySelector('.difficult-gameboards');
 var scoreCard = document.querySelector('.score-cards');
 var homeButtonView = document.querySelector('.home-button-container');
 var homeButtonViewDifficult = document.querySelector('.home-button-container-difficult');
-var homeButton = document.querySelector('.home-button');
-var homeButton2 = document.querySelector('.home-button2');
+var homeButton = document.querySelector('.home-button')
+var homeButton2 = document.querySelector('.home-button2')
 var resetButton = document.querySelector('.reset-button');
 var resetButton2 = document.querySelector('.reset-button2');
 var leftScore  = document.querySelector('.left-score-count');
@@ -57,24 +57,25 @@ classicGameSelectorButton.addEventListener('click', openClassicTypeGame);
 difficultGameSelectorButton.addEventListener('click', openDifficultTypeGame);
 homeButton.addEventListener('click', goHome);
 homeButton2.addEventListener('click', goHome);
-
 resetButton.addEventListener('click', resetPage);
 resetButton2.addEventListener('click', resetPage);
-
 leftRock.addEventListener('click', playerLeftSelectClassic);
 leftPaper.addEventListener('click', playerLeftSelectClassic);
 leftScissors.addEventListener('click', playerLeftSelectClassic);
-
 leftMetal.addEventListener('click', playerLeftSelectDifficult);
 leftWater.addEventListener('click', playerLeftSelectDifficult);
 leftWood.addEventListener('click', playerLeftSelectDifficult);
 leftFire.addEventListener('click', playerLeftSelectDifficult);
 leftEarth.addEventListener('click', playerLeftSelectDifficult);
+window.addEventListener ('beforeunload', (event) => {
+  event.returnValue = "This will clear your score.  Continue?";
+})
 
 
 function playerLeftSelectClassic(event){
   leftSelect();
   newGame.leftPlayer.takeTurn(event);
+  homeButton.disabled = true;
   setTimeout(computerSelectClassic, 500);
   setTimeout(classicGameScoreBoard, 1500);
   setTimeout(playAgain, 2500);
@@ -87,6 +88,7 @@ function computerSelectClassic() {
 function playerLeftSelectDifficult(event){
   difficultLeftSelect();
   newGame.leftPlayer.takeTurnDifficultGame(event);
+  homeButton2.disabled = true;
   setTimeout(computerSelectDifficult, 500);
   setTimeout(difficultGameScoreBoard, 1500);
   setTimeout(playDifficultAgain, 2500);
@@ -118,10 +120,11 @@ function goHome(){
 }
 
 function resetPage(){
-
+  location.reload();
 }
 
 function playAgain() {
+  homeButton.disabled = false;
   show(gameBoardPage);
   hide(gameTie);
   hide(gameWin);
@@ -139,9 +142,12 @@ function playAgain() {
   hide(selectRightScissors);
   hide(selectLeftScissors);
   show(resetButton);
+  show(resetButton2);
+
 }
 
 function playDifficultAgain() {
+  homeButton2.disabled = false;
   show(difficultGameBoardPage);
   hide(gameTie);
   hide(gameWin);
@@ -167,6 +173,7 @@ function playDifficultAgain() {
   hide(selectRightEarth);
   hide(selectLeftEarth);
   show(resetButton2);
+  show(resetButton);
 }
 
 
@@ -207,6 +214,7 @@ function hide(element) {
 };
 
 function openClassicTypeGame(event){
+  console.log("1", newGame);
   if (newGame === null){
     newGame = new Game();
     newGame.startClassicGame();
@@ -225,11 +233,13 @@ function openClassicTypeGame(event){
     show(gameBoardPage);
     show(scoreCard);
     show(homeButtonView)
-    show(resetButton)
+
   }
+    console.log("2", newGame);
 }
 
 function openDifficultTypeGame (){
+  console.log("3", newGame);
   if (newGame === null){
     newGame = new Game();
     newGame.startDifficultGame();
@@ -248,8 +258,8 @@ function openDifficultTypeGame (){
     show(difficultGameBoardPage);
     show(scoreCard);
     show(homeButtonViewDifficult)
-    show(resetButton2)
   }
+  console.log("4", newGame);
 }
 
 // //these are an extra if I have time

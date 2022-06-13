@@ -3,7 +3,6 @@
   font-kerning: normal;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-weight: normal;
-
 }
 
 html {
@@ -12,13 +11,6 @@ html {
 
 body {
   background: rgb(0 126 161);
-  /* display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center
-	align-items: stretch;
-	align-content: stretch; */
-
 }
 .page-container{
   height: 97vh;
@@ -60,6 +52,7 @@ h1 {
 h4 {
   font-size: 1.4em;
 }
+
 .difficult-game-selector:hover,
 .classic-game-selector:hover{
   font-size: 1.45em;
@@ -111,35 +104,33 @@ align-content: stretch;
 .R-scissors-image,
 .L-paper-image,
 .L-scissors-image {
-width: 80%;
-height: 80%;
+  width: 80%;
+  height: 80%;
 }
 
 .R-rock-image,
 .L-rock-image {
-width: 55%;
-height:55%;
+  width: 55%;
+    height:55%;
 }
 
 
 .classic-left-piece-paper:hover{
-margin-bottom: 2%;
-width: 105%;
-height: 105%;
-
+  margin-bottom: 2%;
+  width: 105%;
+  height: 105%;
 }
 
 
 .classic-left-piece-scissors:hover {
-width: 110%;
-height: 110%;
+  width: 110%;
+  height: 110%;
 
 }
 
 .classic-left-piece-rock:hover {
-width: 75%;
-height:75%;
-
+  width: 75%;
+  height:75%;
 }
 
 
@@ -241,6 +232,7 @@ height:75%;
 	align-content: stretch;
   width:98vw;
 }
+
 .game-selectors{
   display: flex;
   flex-direction: column;
@@ -251,6 +243,7 @@ height:75%;
   height: 100%;
   width: 20%;
 }
+
 .selector-container{
   display: flex;
   flex-direction: column;
@@ -274,13 +267,13 @@ height:75%;
   height: 95%;
   margin: 1% 0 .5% 0;
 }
+
 .classic-game-selector:hover {
   background-color: #b0c4de;
   box-shadow: 1em 2em 1em black;
   width:100%;
   height: 115%;
 }
-
 
 .difficult-game-selector {
   border: solid 1px black;
@@ -307,10 +300,10 @@ height:75%;
 .win{
   background: green;
 }
+
 .lose{
   background: red;
 }
-
 
 .game-result-tie,
 .game-result-lose,
@@ -347,8 +340,6 @@ height:75%;
   border: none;
 }
 
-
-
 .gameboards {
     display: flex;
   	flex-direction: row;
@@ -381,9 +372,9 @@ height:75%;
   	align-content: center;
   }
 
-  .metal-container,
-  .water-container,
-  .wood-container{
+.metal-container,
+.water-container,
+.wood-container{
     width: 100%;
     height: calc(100%/3);
     display: flex;
@@ -395,8 +386,8 @@ height:75%;
     object-fit: fill;
   }
 
-  .fire-container,
-  .earth-container{
+.fire-container,
+.earth-container{
     width: 100%;
     height: calc(100%/2);
     display: flex;
@@ -512,13 +503,10 @@ border-right: 1px solid white;
 
 .difficult-game-piece{
   font-size: 4em;
-  /* margin-bottom:10%; */
 }
 
 .left-D-piece:hover{
   font-size: 8em;
-
-
 }
 
 .vs-container {
@@ -550,7 +538,6 @@ border-right: 1px solid white;
   font-size: 6em;
   font-weight: 300;
 }
-
 
 .hidden{
   display: none;
