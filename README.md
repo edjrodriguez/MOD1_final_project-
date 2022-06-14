@@ -7,11 +7,14 @@ Rock, paper, scissors
         - DRY JavaScript
         - event delegation to handle similar event listeners
     - Understand the difference between the data model and how the data is displayed on the DOM
+
 ## Illustrated Design Mock-Up
-<img width="200" alt="On page load" src="https://user-images.githubusercontent.com/100659793/173704612-b5a19138-aef5-4076-960c-52dd847cf82c.png">
-<img width="200" alt="Gameboard Mock-up" src="https://user-images.githubusercontent.com/100659793/173704762-10982cc8-5031-4cc4-9f9d-81a5cb3901fe.png">
+<img width="300" alt="On page load" src="https://user-images.githubusercontent.com/100659793/173704612-b5a19138-aef5-4076-960c-52dd847cf82c.png">
+<img width="300" alt="Gameboard Mock-up" src="https://user-images.githubusercontent.com/100659793/173704762-10982cc8-5031-4cc4-9f9d-81a5cb3901fe.png">
 
+## Guided Motion Feature
 
+https://user-images.githubusercontent.com/100659793/173706271-853a4387-2f5a-439c-a7ef-f1fa5a472313.mov
 
 
 ## Technologies
