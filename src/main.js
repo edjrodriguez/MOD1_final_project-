@@ -8,10 +8,7 @@ var gameBoardPage = document.querySelector('.gameboards');
 var difficultGameBoardPage = document.querySelector('.difficult-gameboards');
 var form = document.querySelector('.popup-container')
 var buttonStart = document.querySelector('.btn-start')
-
 var buttonStart2 = document.querySelector('.btn-start2')
-
-
 var scoreCard = document.querySelector('.score-cards');
 var computerName = document.querySelector('.computer-name')
 var computerAvatar = document.querySelector('.computer-avatar')
@@ -19,8 +16,6 @@ var userName = document.querySelector('.user-name')
 var userAvatar = document.querySelector('.user-avatar')
 var userInputName = document.querySelector('.userinput')
 var selectedAvatar = document.querySelector('.userinput2')
-
-
 var homeButtonView = document.querySelector('.home-button-container');
 var homeButtonViewDifficult = document.querySelector('.home-button-container-difficult');
 var homeButton = document.querySelector('.home-button')
@@ -93,7 +88,7 @@ leftWood.addEventListener('click', playerLeftSelectDifficult);
 leftFire.addEventListener('click', playerLeftSelectDifficult);
 leftEarth.addEventListener('click', playerLeftSelectDifficult);
 window.addEventListener ('beforeunload', (event) => {
-  event.returnValue = "This will clear your score.  Continue?";
+  event.returnValue = true;
 })
 
 function playerLeftSelectClassic(event){
@@ -140,25 +135,22 @@ function continueGame(){
   if(userInputName.value != ''){
   userName.innerText = userInputName.value;
   }
-  if (selectedAvatar.value != "🫥")
+  if(selectedAvatar.value != "🫥")
   userAvatar.innerText = selectedAvatar.value;
 }
-
 
 function continueGame2(){
   hide(form);
   show(homeButtonViewDifficult)
   show(homeButtonView)
   show(difficultGameBoardPage)
-  if (userInputName.value != '' || selectedAvatar.value != "🫥"){
+  if(userInputName.value != '' || selectedAvatar.value != "🫥"){
     userName.innerText = userInputName.value;
     userAvatar.innerText = selectedAvatar.value;
   }
-  if (selectedAvatar.value != "🫥")
+  if(selectedAvatar.value != "🫥")
   userAvatar.innerText = selectedAvatar.value;
 }
-
-
 
 function openClassicTypeGame(event){
   if (newGame === null){
