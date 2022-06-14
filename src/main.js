@@ -7,11 +7,19 @@ var difficultBoardHeading = document.querySelector('.difficult-heading');
 var gameBoardPage = document.querySelector('.gameboards');
 var difficultGameBoardPage = document.querySelector('.difficult-gameboards');
 var form = document.querySelector('.popup-container')
+var buttonStart = document.querySelector('.btn-start')
+
+var buttonStart2 = document.querySelector('.btn-start2')
+
+
 var scoreCard = document.querySelector('.score-cards');
 var computerName = document.querySelector('.computer-name')
 var computerAvatar = document.querySelector('.computer-avatar')
 var userName = document.querySelector('.user-name')
 var userAvatar = document.querySelector('.user-avatar')
+var userInputName = document.querySelector('.userinput')
+var selectedAvatar = document.querySelector('.userinput2')
+
 
 var homeButtonView = document.querySelector('.home-button-container');
 var homeButtonViewDifficult = document.querySelector('.home-button-container-difficult');
@@ -72,6 +80,8 @@ difficultGameSelectorButton.addEventListener('mouseenter', showDifficultPieces);
 difficultGameSelectorButton.addEventListener('mouseleave', showDifficultPieces);
 homeButton.addEventListener('click', goHome);
 homeButton2.addEventListener('click', goHome);
+buttonStart.addEventListener('click', continueGame);
+buttonStart2.addEventListener('click', continueGame2)
 resetButton.addEventListener('click', resetPage);
 resetButton2.addEventListener('click', resetPage);
 leftRock.addEventListener('click', playerLeftSelectClassic);
@@ -122,17 +132,46 @@ function difficultGameScoreBoard(){
   newGame.checkWinnerDifficultGame();
 }
 
+function continueGame(){
+  hide(form);
+  show(homeButtonViewDifficult)
+  show(homeButtonView)
+  show(gameBoardPage)
+  if(userInputName.value != ''){
+  userName.innerText = userInputName.value;
+  }
+  if (selectedAvatar.value != "🫥")
+  userAvatar.innerText = selectedAvatar.value;
+}
+
+
+function continueGame2(){
+  hide(form);
+  show(homeButtonViewDifficult)
+  show(homeButtonView)
+  show(difficultGameBoardPage)
+  if (userInputName.value != '' || selectedAvatar.value != "🫥"){
+    userName.innerText = userInputName.value;
+    userAvatar.innerText = selectedAvatar.value;
+  }
+  if (selectedAvatar.value != "🫥")
+  userAvatar.innerText = selectedAvatar.value;
+}
+
+
+
 function openClassicTypeGame(event){
   if (newGame === null){
     newGame = new Game();
-    newGame.startGame();
-
     hide(gameSelectPageHome);
     hide(gameSelectHeading);
     show(gameBoardHeading)
     show(gameBoardPage);
     show(scoreCard);
     show(homeButtonView)
+    show(buttonStart)
+    hide(buttonStart2)
+    setTimeout(startTheGame, 1000);
   } else {
     hide(gameSelectPageHome);
     hide(gameSelectHeading);
@@ -146,14 +185,15 @@ function openClassicTypeGame(event){
 function openDifficultTypeGame (){
   if (newGame === null){
     newGame = new Game();
-    newGame.startGame();
-
     hide(gameSelectPageHome);
     hide(gameSelectHeading);
     show(difficultBoardHeading)
     show(difficultGameBoardPage);
     show(scoreCard);
+    hide(buttonStart)
+    show(buttonStart2)
     show(homeButtonViewDifficult)
+    setTimeout(startTheGame, 1000);
   } else {
     hide(gameSelectPageHome);
     hide(gameSelectHeading);
@@ -165,6 +205,7 @@ function openDifficultTypeGame (){
 }
 
 function goHome(){
+  hide(form)
   show(gameSelectPageHome);
   hide(gameBoardPage);
   hide(difficultGameBoardPage);
@@ -178,6 +219,10 @@ function goHome(){
 
 function resetPage(){
   location.reload();
+}
+
+function startTheGame(){
+   newGame.startGame();
 }
 
 function playAgain() {

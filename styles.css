@@ -1,5 +1,5 @@
 * {
-  border: solid 1px red;
+  /* border: solid 1px red; */
   font-kerning: normal;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-weight: normal;
@@ -22,6 +22,10 @@ h3 {
 h2,
 p {
   text-align: center;
+}
+
+.form-text{
+  font-family: 'Orbitron', sans-serif;
 }
 
 h2 {
@@ -613,7 +617,7 @@ border-right: 1px solid white;
   justify-content: center;
   align-items: center;
   align-content: stretch;
-  height: 50%;
+  height: 58%;
   width: 100%;
 }
 
@@ -635,14 +639,18 @@ border-right: 1px solid white;
 
 .userinput {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1em;
+  font-size: 1.4em;
   text-align: center;
+}
+
+.form-text {
+  font-size: 1.4em;
 }
 
 .userinput2 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2em;
-  width: 20%;
+  font-size: 1.6em;
+  width: 25%;
 }
 
 .formContainer{
@@ -657,9 +665,10 @@ border-right: 1px solid white;
   align-items: center;
   align-content: stretch;
   height: 100%;
-  width: 75%;
+  width: 100%;
 }
 
+.btn-start2,
 .btn-start,
 .btn-close {
   font-size: 1em;
@@ -667,6 +676,7 @@ border-right: 1px solid white;
   width: 40%;
 }
 
+.btn-start2,
 .btn-start {
   background: green;
 }

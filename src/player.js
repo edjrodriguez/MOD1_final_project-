@@ -11,16 +11,19 @@ class Player {
       computerName.innerText = this.name;
       computerAvatar.innerText = this.token;
     } else if (this.name === undefined){
+      show(form);
+      hide(gameBoardPage);
+      hide(homeButtonView)
+      hide(difficultGameBoardPage);
         this.name = "Human";
         this.token = "🫥"
         userName.innerText = this.name;
-        userAvatar.innerText = this.token
+        userAvatar.innerText = this.token;
     }
   }
 
   selectPiece(piece){
     this.playerPiece = piece;
-
   }
 
   takeTurn(event){
