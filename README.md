@@ -1,5 +1,5 @@
 # MOD1_final_project
-Rock, paper, scissors
+### Rock, paper, scissors
 
 ## Objective
     - Build a Rock Paper Scissors game from scratch!
@@ -13,9 +13,7 @@ Rock, paper, scissors
 <img width="300" alt="Gameboard Mock-up" src="https://user-images.githubusercontent.com/100659793/173704762-10982cc8-5031-4cc4-9f9d-81a5cb3901fe.png">
 
 ## Guided Motion Feature
-
 https://user-images.githubusercontent.com/100659793/173706271-853a4387-2f5a-439c-a7ef-f1fa5a472313.mov
-
 
 ## Technologies
   - Javascript
@@ -45,8 +43,11 @@ https://user-images.githubusercontent.com/100659793/173706271-853a4387-2f5a-439c
 
 
 ## Possible Future Extensions
-- Adding a login page that will hold saved palettes for a user.
-- Scrolling swatches at the bottom of a page from left to right
+Extension - Persist Player data using local storage (number of wins should persist across page refreshes)
+- Add save wins to local storage
+- Add retrieve wins from local storage
+
+Ability to update avatar and name once game has begun.
 
 ## Set Up
 1. Fork this repo  
@@ -55,7 +56,7 @@ https://user-images.githubusercontent.com/100659793/173706271-853a4387-2f5a-439c
 
 ## Sources
  - [MDN](http://developer.mozilla.org/en-US/)
- - [JavaTPoint](https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript)
+ -[StackOverflow](https://stackoverflow.com/)
  - [W3Schools](https://www.w3schools.com/)
 
 ## Contributors
