@@ -21,6 +21,132 @@ body {
   height: 55%;
 }
 
+.game-select-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  width:98vw;
+}
+
+.game-selectors{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  height: 100%;
+  width: calc(100%/5);
+}
+
+
+.select-page-classic {
+    height:100%;
+    width: calc(100%/4);
+    display: flex;
+  	flex-direction: row;
+  	flex-wrap: nowrap;
+  	justify-content: center;
+  	align-items: stretch;
+  	align-content: center;
+  }
+
+h3 {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+  .difficult-rules,
+  .classic-rules {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+  width:100%;
+  color: white;
+  }
+
+  .select-page-left-play-board-edge{
+    width:80%;
+  }
+
+  .select-page-rock,
+  .select-page-paper,
+  .select-page-scissors{
+    width: 100%;
+    height: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    object-fit: fill;
+  }
+
+.selector-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  width:100%;
+  height: 49%;
+}
+
+.classic-game-selector {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  width:95%;
+  height: 95%;
+  margin: 1% 0 .5% 0;
+}
+
+.classic-game-selector:hover {
+  background-color: #b0c4de;
+  box-shadow: 1em 2em 1em black;
+  width:100%;
+  height: 115%;
+}
+
+.difficult-game-selector {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  width: 95%;
+  height: 95%;
+  margin: .5% 0 1% 0 ;
+
+}
+
+.difficult-game-selector:hover {
+  background-color: #ff6347;
+  box-shadow: 1em 2em 1em black;
+  width:100%;
+  height: 115%;
+
+}
+
 h1 {
   width: 100%;
   text-align: center;
@@ -44,7 +170,7 @@ h1 {
   text-align: center;
   font-size: 6em;
   margin: 0%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   color: white;
 }
 
@@ -179,7 +305,8 @@ align-content: stretch;
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
-  width: 12%;
+  width: 15%;
+  height: inherit;
   margin-bottom: 2%;
   margin-left: 10%;
 
@@ -188,6 +315,7 @@ align-content: stretch;
 .reset-button,
 .reset-button2{
   background: red;
+
 }
 
 .reset-button:hover,
@@ -223,79 +351,7 @@ align-content: stretch;
 
 }
 
-.game-select-page {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-  width:98vw;
-}
 
-.game-selectors{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
-  height: 100%;
-  width: 20%;
-}
-
-.selector-container{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
-  width:100%;
-  height: 49%;
-}
-
-.classic-game-selector {
-  border: solid 1px black;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
-  width:95%;
-  height: 95%;
-  margin: 1% 0 .5% 0;
-}
-
-.classic-game-selector:hover {
-  background-color: #b0c4de;
-  box-shadow: 1em 2em 1em black;
-  width:100%;
-  height: 115%;
-}
-
-.difficult-game-selector {
-  border: solid 1px black;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
-  width: 95%;
-  height: 95%;
-  margin: .5% 0 1% 0 ;
-
-}
-
-.difficult-game-selector:hover {
-  background-color: #ff6347;
-  box-shadow: 1em 2em 1em black;
-  width:100%;
-  height: 115%;
-
-}
 
 .win{
   background: green;

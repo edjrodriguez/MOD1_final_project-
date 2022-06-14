@@ -17,10 +17,10 @@
         <h1 class="title"> Rock, Paper, Scissors</h1>
           <div class="button-container">
             <div class="home-button-container hidden">
-              <button style = "cursor:pointer" class="home-button" type="submit" name="button">Change Game?</button>
+              <button style = "cursor:pointer" class="home-button" type="submit" name="button">Change Game Type?</button>
             </div>
             <div class="reset-button-container">
-              <button style = "cursor:pointer" class="reset-button hidden" type="submit" name="button">Clear Score</button>
+              <button style = "cursor:pointer" class="reset-button hidden" type="submit" name="button">End Game and Clear Score</button>
             </div>
           </div>
       </section>
@@ -29,10 +29,10 @@
         <h1 class="title"> Metal, Water, Wood, Fire, Earth</h1>
         <div class="button-container">
           <div class="home-button-container-difficult hidden">
-            <button style = "cursor:pointer" class="home-button2" type="sumbit" name="button">Change Game?</button>
+            <button style = "cursor:pointer" class="home-button2" type="sumbit" name="button">Change Game Type?</button>
           </div>
           <div class="reset-button-container">
-            <button style = "cursor:pointer" class="reset-button2 hidden" type="sumbit" name="button">Clear Score</button>
+            <button style = "cursor:pointer" class="reset-button2 hidden" type="sumbit" name="button">End Game and Clear Score</button>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@
       <section class="heading-game-select ">
         <h1 class="title h1-game-select-page"> Rock, Paper, Scissors</h1>
         <div class="home-button-container hidden">
-          <button style = "cursor:pointer" class="home-button" type="button" name="button">Change Game?</button>
+          <button style = "cursor:pointer" class="home-button" type="button" name="button">Change Game Type?</button>
         </div>
       </section>
 
@@ -57,6 +57,49 @@
 
 
       <section class="game-select-page ">
+
+
+        <div class="select-page-classic ">
+          <div class="select-page-left-play-board-edge pieces1 hidden">
+            <div class="select-page-rock">
+              <img style = "cursor:pointer" class="L-rock-image classic-left-piece-rock rock-selection" src="SVG/rock.svg">
+            </div>
+            <div class="select-page-paper">
+              <img style = "cursor:pointer" class="L-paper-image classic-left-piece-paper paper-selection" src="SVG/paper.svg">
+            </div>
+            <div class="select-page-scissors">
+              <img style = "cursor:pointer" class="L-scissors-image classic-left-piece-scissors scissors-selection" src="SVG/scissors.svg">
+            </div>
+          </div>
+          <div class="select-page-left-play-board-edge pieces3 hidden">
+            <div class="metal-container gamepiece">
+              <div style = "cursor:pointer" class="l-metal left-D-piece difficult-game-piece">⚙️</div>
+            </div>
+            <div class="water-container gamepiece">
+              <div style = "cursor:pointer" class="l-water left-D-piece  difficult-game-piece">🌊</div>
+            </div>
+            <div class="wood-container gamepiece">
+              <div style = "cursor:pointer" class="l-wood left-D-piece  difficult-game-piece">🪵</div>
+            </div>
+          </div>
+          <div class="left-play-board-middle pieces2 hidden">
+            <div class="fire-container gamepiece">
+              <div style = "cursor:pointer" class="l-fire left-D-piece  difficult-game-piece">🔥</div>
+            </div>
+            <div class="earth-container gamepiece">
+              <div style = "cursor:pointer" class="l-earth left-D-piece  difficult-game-piece">🌎</div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
         <div class="game-selectors">
           <div class="selector-container">
             <h4 style = "cursor:pointer" class="classic-game-selector">Classic Game</h4>
@@ -65,6 +108,31 @@
             <h4 style = "cursor:pointer" class="difficult-game-selector">Difficult</h4>
           </div>
         </div>
+
+
+
+        <div class="select-page-classic ">
+            <div class="classic-rules rules1 hidden">
+              <h3>Classic Game Rules:</h3>
+              <p>- Rock > Scissors</p>
+              <p>- Paper > Rock</p>
+              <p>- Scissors > Paper</p>
+            </div>
+            <div class="difficult-rules rules2 hidden">
+              <h3>Difficult Game Rules:</h3>
+              <p>- Metal > Wood & Earth</p>
+              <p>- Water > Fire & Metal</p>
+              <p>- Wood > Earth & Water</p>
+              <p>- Fire > Wood & Metal</p>
+              <p>- Earth > Fire & Water</p>
+            </div>
+        </div>
+
+
+
+
+
+
       </section>
 
 

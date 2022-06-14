@@ -50,11 +50,19 @@ var selectRightWater = document.querySelector('.R-water-select');
 var selectRightWood = document.querySelector('.R-wood-select');
 var selectRightFire = document.querySelector('.R-fire-select');
 var selectRightEarth = document.querySelector('.R-earth-select');
+var rules1 = document.querySelector('.rules1')
+var pieces1 = document.querySelector('.pieces1')
+var rules2 = document.querySelector('.rules2')
+var pieces3 = document.querySelector('.pieces3')
+var pieces2 = document.querySelector('.pieces2')
 
 var newGame = null;
-
+classicGameSelectorButton.addEventListener('mouseenter', showClassicPieces);
+classicGameSelectorButton.addEventListener('mouseleave', showClassicPieces);
 classicGameSelectorButton.addEventListener('click', openClassicTypeGame);
 difficultGameSelectorButton.addEventListener('click', openDifficultTypeGame);
+difficultGameSelectorButton.addEventListener('mouseenter', showDifficultPieces);
+difficultGameSelectorButton.addEventListener('mouseleave', showDifficultPieces);
 homeButton.addEventListener('click', goHome);
 homeButton2.addEventListener('click', goHome);
 resetButton.addEventListener('click', resetPage);
@@ -213,6 +221,10 @@ function hide(element) {
   element.classList.add('hidden')
 };
 
+function toggle(element) {
+  element.classList.toggle('hidden')
+}
+
 function openClassicTypeGame(event){
   console.log("1", newGame);
   if (newGame === null){
@@ -263,15 +275,17 @@ function openDifficultTypeGame (){
 }
 
 // //these are an extra if I have time
-// classicGameSelectorButton.addEventListener('mouseenter', showClassicPieces);
-// function showClassicPieces(){
-  //
-  // }
-  //
-  // difficultGameSelectorButton.addEventListener('mouseenter', showDifficultPieces);
-  // function showDifficultPieces(){
-    //
-    // }
+
+function showClassicPieces(){
+  toggle(rules1)
+  toggle(pieces1)
+  }
+
+function showDifficultPieces(){
+  toggle(rules2)
+  toggle(pieces2)
+  toggle(pieces3)
+}
 
 // computerSide.addEventListener('mouseenter', offSides)
 
