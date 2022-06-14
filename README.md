@@ -56,7 +56,7 @@ Ability to update avatar and name once game has begun.
 
 ## Sources
  - [MDN](http://developer.mozilla.org/en-US/)
- -[StackOverflow](https://stackoverflow.com/)
+ - [StackOverflow](https://stackoverflow.com/)
  - [W3Schools](https://www.w3schools.com/)
 
 ## Contributors
