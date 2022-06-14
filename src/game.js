@@ -6,19 +6,17 @@ class Game{
       this.classicGamePieces = ['rock', 'paper', 'scissors'];
       this.difficultGamePieces = ['metal', 'water', 'wood', 'fire', 'earth'];
   }
-
   startGame(){
     this.leftPlayer = new Player();
     this.rightPlayer = new Player("Your Computer", "💻");
     this.leftPlayer.identify();
     this.rightPlayer.identify();
   }
-
   checkWinnerClassicGame(){
     if(this.leftPlayer.playerPiece === this.rightPlayer.playerPiece){
       hide(gameBoardPage);
       show(gameTie);
-    } else if ((this.leftPlayer.playerPiece === "rock" && this.rightPlayer.playerPiece === 'scissors') || (this.leftPlayer.playerPiece === "paper" && this.rightPlayer.playerPiece === 'rock') || (this.leftPlayer.playerPiece === "scissors" && this.rightPlayer.playerPiece === 'paper')){
+    } else if ((this.leftPlayer.playerPiece === "rock" && this.rightPlayer.playerPiece === 'scissors') || (this.leftPlayer.playerPiece === "paper" && this.rightPlayer.playerPiece === 'rock') ||       (this.leftPlayer.playerPiece === "scissors" && this.rightPlayer.playerPiece === 'paper')){
       this.leftPlayer.wins +=1;
       leftScore.innerText = this.leftPlayer.wins;
       hide(gameBoardPage);
@@ -30,7 +28,6 @@ class Game{
       show(gameLose);
     }
   }
-
   checkWinnerDifficultGame(){
     if(this.leftPlayer.playerPiece === this.rightPlayer.playerPiece){
       hide(difficultGameBoardPage);
@@ -48,9 +45,3 @@ class Game{
     }
   }
 }
-
-
-// changeText() {
-//   this.leftWins +=1:
-//   leftScore.innerText = this.leftWins;
-// }
