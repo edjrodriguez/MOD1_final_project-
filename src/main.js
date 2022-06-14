@@ -57,6 +57,7 @@ var pieces3 = document.querySelector('.pieces3')
 var pieces2 = document.querySelector('.pieces2')
 
 var newGame = null;
+
 classicGameSelectorButton.addEventListener('mouseenter', showClassicPieces);
 classicGameSelectorButton.addEventListener('mouseleave', showClassicPieces);
 classicGameSelectorButton.addEventListener('click', openClassicTypeGame);
@@ -79,7 +80,6 @@ window.addEventListener ('beforeunload', (event) => {
   event.returnValue = "This will clear your score.  Continue?";
 })
 
-
 function playerLeftSelectClassic(event){
   leftSelect();
   newGame.leftPlayer.takeTurn(event);
@@ -88,6 +88,7 @@ function playerLeftSelectClassic(event){
   setTimeout(classicGameScoreBoard, 1500);
   setTimeout(playAgain, 2500);
 }
+
 function computerSelectClassic() {
   rightSelect();
   newGame.rightPlayer.takeTurn();
@@ -113,6 +114,50 @@ function classicGameScoreBoard(){
 
 function difficultGameScoreBoard(){
   newGame.checkWinnerDifficultGame();
+}
+
+function openClassicTypeGame(event){
+  if (newGame === null){
+    newGame = new Game();
+    newGame.startClassicGame();
+    newGame.rightPlayer.name = "Your Computer"
+    newGame.rightPlayer.token = "💻";
+    hide(gameSelectPageHome);
+    hide(gameSelectHeading);
+    show(gameBoardHeading)
+    show(gameBoardPage);
+    show(scoreCard);
+    show(homeButtonView)
+  } else {
+    hide(gameSelectPageHome);
+    hide(gameSelectHeading);
+    show(gameBoardHeading)
+    show(gameBoardPage);
+    show(scoreCard);
+    show(homeButtonView)
+  }
+}
+
+function openDifficultTypeGame (){
+  if (newGame === null){
+    newGame = new Game();
+    newGame.startDifficultGame();
+    newGame.rightPlayer.name = "Your Computer"
+    newGame.rightPlayer.token = "💻";
+    hide(gameSelectPageHome);
+    hide(gameSelectHeading);
+    show(difficultBoardHeading)
+    show(difficultGameBoardPage);
+    show(scoreCard);
+    show(homeButtonViewDifficult)
+  } else {
+    hide(gameSelectPageHome);
+    hide(gameSelectHeading);
+    show(difficultBoardHeading)
+    show(difficultGameBoardPage);
+    show(scoreCard);
+    show(homeButtonViewDifficult)
+  }
 }
 
 function goHome(){
@@ -151,7 +196,6 @@ function playAgain() {
   hide(selectLeftScissors);
   show(resetButton);
   show(resetButton2);
-
 }
 
 function playDifficultAgain() {
@@ -184,7 +228,16 @@ function playDifficultAgain() {
   show(resetButton);
 }
 
+function showClassicPieces(){
+  toggle(rules1)
+  toggle(pieces1)
+}
 
+function showDifficultPieces(){
+  toggle(rules2)
+  toggle(pieces2)
+  toggle(pieces3)
+}
 
 function leftSelect(){
   hide(leftPaper);
@@ -197,6 +250,7 @@ function rightSelect(){
   hide(rightScissors);
   hide(rightRock);
 }
+
 function difficultLeftSelect(){
   hide(leftMetal);
   hide(leftWater);
@@ -224,73 +278,3 @@ function hide(element) {
 function toggle(element) {
   element.classList.toggle('hidden')
 }
-
-function openClassicTypeGame(event){
-  console.log("1", newGame);
-  if (newGame === null){
-    newGame = new Game();
-    newGame.startClassicGame();
-    newGame.rightPlayer.name = "Your Computer"
-    newGame.rightPlayer.token = "💻";
-    hide(gameSelectPageHome);
-    hide(gameSelectHeading);
-    show(gameBoardHeading)
-    show(gameBoardPage);
-    show(scoreCard);
-    show(homeButtonView)
-  } else {
-    hide(gameSelectPageHome);
-    hide(gameSelectHeading);
-    show(gameBoardHeading)
-    show(gameBoardPage);
-    show(scoreCard);
-    show(homeButtonView)
-
-  }
-    console.log("2", newGame);
-}
-
-function openDifficultTypeGame (){
-  console.log("3", newGame);
-  if (newGame === null){
-    newGame = new Game();
-    newGame.startDifficultGame();
-    newGame.rightPlayer.name = "Your Computer"
-    newGame.rightPlayer.token = "💻";
-    hide(gameSelectPageHome);
-    hide(gameSelectHeading);
-    show(difficultBoardHeading)
-    show(difficultGameBoardPage);
-    show(scoreCard);
-    show(homeButtonViewDifficult)
-  } else {
-    hide(gameSelectPageHome);
-    hide(gameSelectHeading);
-    show(difficultBoardHeading)
-    show(difficultGameBoardPage);
-    show(scoreCard);
-    show(homeButtonViewDifficult)
-  }
-  console.log("4", newGame);
-}
-
-// //these are an extra if I have time
-
-function showClassicPieces(){
-  toggle(rules1)
-  toggle(pieces1)
-  }
-
-function showDifficultPieces(){
-  toggle(rules2)
-  toggle(pieces2)
-  toggle(pieces3)
-}
-
-// computerSide.addEventListener('mouseenter', offSides)
-
-//
-// function offSides (){
-//   show(computerSideOffSides);
-//   hide(computerSide);
-// }
