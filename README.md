@@ -2,8 +2,17 @@
 Rock, paper, scissors
 
 ## Objective
-  - This project allowed students to collaborate as a team with opportunity to write HTML and CSS, and leverage JavaScript to both create a data model and interact with the DOM.
-  - This project is a color swatch random generator with locking and saving features.
+    - Build a Rock Paper Scissors game from scratch!
+    - Solidify and demonstrate your understanding of:
+        - DRY JavaScript
+        - event delegation to handle similar event listeners
+    - Understand the difference between the data model and how the data is displayed on the DOM
+## Illustrated Design Mock-Up
+<img width="200" alt="On page load" src="https://user-images.githubusercontent.com/100659793/173704612-b5a19138-aef5-4076-960c-52dd847cf82c.png">
+<img width="200" alt="Gameboard Mock-up" src="https://user-images.githubusercontent.com/100659793/173704762-10982cc8-5031-4cc4-9f9d-81a5cb3901fe.png">
+
+
+
 
 ## Technologies
   - Javascript
@@ -13,14 +22,16 @@ Rock, paper, scissors
 ## Features
 - On Game Select Page
  - Two boxes for "Classic Game" and "Difficult"
-  - When user hovers over the boxes the game pieces and rules appear for their respective games
+  - When user hovers over the boxes the game pieces and rules appear for their respective games.
 - On "Classic Game" Selection user assigned left side of the board, computer assigned to right side.  
+  - If "Difficult" game was not already clicked on -> Player prompted to update their player name from "Human" and to change avatar.  Completely optional.  Will assign Human user name and token by default.  Only asked this once per game.  Need to reset game if you want to change name or avatar.  
   - Score board appears
   - Change game option appears
     - After left player makes a selection the computer makes a selection and the game determines a winner.  Adding points to the scoreboard.
     - No score is added on tie.
     - Option to "End Game and Clear Score" appears.  
 - On "Difficult" game Selection user assigned left side of the board, computer assigned to right side.  
+  - If "Classic Game" was not already clicked on -> Player prompted to update their player name from "Human" and to change avatar.  Completely optional.  Will assign Human user name and token by default.  Only asked this once per game.  Need to reset game if player wants to change name or avatar.  
   - Score board appears
     - Change game option appears
       - After left player makes a selection the computer makes a selection and the game determines a winner.  Adding points to the scoreboard.
