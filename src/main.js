@@ -6,7 +6,13 @@ var gameBoardHeading = document.querySelector('.heading');
 var difficultBoardHeading = document.querySelector('.difficult-heading');
 var gameBoardPage = document.querySelector('.gameboards');
 var difficultGameBoardPage = document.querySelector('.difficult-gameboards');
+var form = document.querySelector('.popup-container')
 var scoreCard = document.querySelector('.score-cards');
+var computerName = document.querySelector('.computer-name')
+var computerAvatar = document.querySelector('.computer-avatar')
+var userName = document.querySelector('.user-name')
+var userAvatar = document.querySelector('.user-avatar')
+
 var homeButtonView = document.querySelector('.home-button-container');
 var homeButtonViewDifficult = document.querySelector('.home-button-container-difficult');
 var homeButton = document.querySelector('.home-button')
@@ -119,9 +125,8 @@ function difficultGameScoreBoard(){
 function openClassicTypeGame(event){
   if (newGame === null){
     newGame = new Game();
-    newGame.startClassicGame();
-    newGame.rightPlayer.name = "Your Computer"
-    newGame.rightPlayer.token = "💻";
+    newGame.startGame();
+
     hide(gameSelectPageHome);
     hide(gameSelectHeading);
     show(gameBoardHeading)
@@ -141,9 +146,8 @@ function openClassicTypeGame(event){
 function openDifficultTypeGame (){
   if (newGame === null){
     newGame = new Game();
-    newGame.startDifficultGame();
-    newGame.rightPlayer.name = "Your Computer"
-    newGame.rightPlayer.token = "💻";
+    newGame.startGame();
+
     hide(gameSelectPageHome);
     hide(gameSelectHeading);
     show(difficultBoardHeading)

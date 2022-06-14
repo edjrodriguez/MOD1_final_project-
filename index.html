@@ -44,6 +44,36 @@
         </div>
       </section>
 
+        <div class="popup-container hidden">
+       <div class="popup-form" id="popupForm">
+         <form action="/action_page.php" class="formContainer">
+           <div class="right-user-image">💻</div>
+           <h2>Your computer needs to know who they are playing.</h2>
+           <input type="text" id="users-name" class="userinput" placeholder="What should I call you?" name="users-name" required>
+           <label class="form-labels">
+             <strong >Choose Your Avatar</strong>
+           </label>
+           <select name="left-token" class="l-user-token userinput2">
+             <option value="avatar0">🫥</option>
+             <option value="avatar1">👩🏿‍💻</option>
+             <option value="avatar2">🧑🏿‍💻</option>
+             <option value="avatar3">👨🏿‍💻</option>
+             <option value="avatar4">👩🏽‍💻</option>
+             <option value="avatar5">🧑🏽‍💻</option>
+             <option value="avatar6">👨🏽‍💻</option>
+             <option value="avatar7">👩‍💻</option>
+             <option value="avatar8">🧑‍💻</option>
+             <option value="avatar9">👨‍💻</option>
+             <option value="avatar10">🧙🏼‍♀️</option>
+             <option value="avatar11">🧙🏼‍♂️</option>
+           </select>
+           <button type="button" class="btn-start">Start Playing</button>
+           <button type="button" class="btn-close">Close</button>
+         </form>
+       </div>
+     </div>
+
+
       <section class="game-result-win hidden ">
         <h4 class="classic-game-result win">You Won!!</h4>
       </section>
@@ -298,7 +328,8 @@
         <section class="score-cards hidden">
             <div class="left-score-template">
               <div class="user-image-container">
-                <div class="left-user-image">👨🏿‍💻</div>
+                <div class="left-user-image user-avatar">‍</div>
+                <p class="git st"></p>
               </div>
               <div class="left-score">
                 <h3 class="left-user-wins">Wins:</h3>
@@ -318,7 +349,8 @@
                 </div>
               </div>
               <div class="user-image-container">
-                <div class="right-user-image">💻</div>
+                <div class="right-user-image computer-avatar"></div>
+                  <p class="computer-name"></p>
               </div>
             </div>
         </section>

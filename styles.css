@@ -1,5 +1,5 @@
 * {
-  /* border: solid 1px red; */
+  border: solid 1px red;
   font-kerning: normal;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-weight: normal;
@@ -11,6 +11,21 @@ html {
 
 body {
   background: rgb(0 126 161);
+}
+
+h3 {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+
+h2,
+p {
+  text-align: center;
+}
+
+h2 {
+  background: red;
 }
 .page-container{
   height: 97vh;
@@ -54,15 +69,6 @@ body {
   	align-content: center;
   }
 
-h3 {
-  font-size: 2em;
-  color: black;
-  text-align: center;
-}
-
-p {
-  text-align: center;
-}
 
   .difficult-rules,
   .classic-rules {
@@ -338,7 +344,6 @@ align-content: stretch;
 
 }
 
-
 .home-button:hover,
 .home-button2:hover {
   display: flex;
@@ -350,7 +355,6 @@ align-content: stretch;
   box-shadow: .5em 1em .5em black;
 
 }
-
 
 
 .win{
@@ -453,7 +457,7 @@ align-content: stretch;
     align-items: center;
     align-content: stretch;
     object-fit: fill;
-  }
+}
 
 .left-play-board-center{
 display:grid;
@@ -554,7 +558,13 @@ border-right: 1px solid white;
 .left-user-image,
 .right-user-image {
   font-size: 5.8em;
-  margin-bottom: 25%;
+  margin-bottom: 5%;
+}
+
+.user-name,
+.computer-name {
+  color: white;
+  font-size: 1.5em;
 }
 
 .difficult-game-piece{
@@ -594,6 +604,73 @@ border-right: 1px solid white;
   font-size: 6em;
   font-weight: 300;
 }
+
+.popup-container{
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  height: 50%;
+  width: 100%;
+}
+
+.popup-form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  height: 100%;
+}
+
+.form-labels{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+.userinput {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1em;
+  text-align: center;
+}
+
+.userinput2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  width: 20%;
+}
+
+.formContainer{
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 2em 3em 2em black;
+  border: black solid 2px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: stretch;
+  height: 100%;
+  width: 75%;
+}
+
+.btn-start,
+.btn-close {
+  font-size: 1em;
+  text-align: center;
+  width: 40%;
+}
+
+.btn-start {
+  background: green;
+}
+
 
 .hidden{
   display: none;

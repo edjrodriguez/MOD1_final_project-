@@ -6,6 +6,18 @@ class Player {
     this.playerPiece = null;
   }
 
+  identify(){
+    if(this.name === "Your Computer"){
+      computerName.innerText = this.name;
+      computerAvatar.innerText = this.token;
+    } else if (this.name === undefined){
+        this.name = "Human";
+        this.token = "🫥"
+        userName.innerText = this.name;
+        userAvatar.innerText = this.token
+    }
+  }
+
   selectPiece(piece){
     this.playerPiece = piece;
 

@@ -7,14 +7,11 @@ class Game{
       this.difficultGamePieces = ['metal', 'water', 'wood', 'fire', 'earth'];
   }
 
-  startClassicGame(){
+  startGame(){
     this.leftPlayer = new Player();
-    this.rightPlayer = new Player ();
-  }
-
-  startDifficultGame(){
-    this.leftPlayer = new Player();
-    this.rightPlayer = new Player();
+    this.rightPlayer = new Player("Your Computer", "💻");
+    this.leftPlayer.identify();
+    this.rightPlayer.identify();
   }
 
   checkWinnerClassicGame(){
